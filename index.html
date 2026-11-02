@@ -28,10 +28,25 @@
 <div class="label" style="margin-top:10px">Tonight</div><div style="font-size:20px;font-weight:600" id="pnl">—</div></div>
 <div class="card"><div class="label" style="margin-bottom:6px">Agents</div><div id="agents"></div></div>
 <script>
-const DP = location.pathname.replace(/\/?$/, '/') + 'd/_WqzOte27CigDJr55d49feRQyI7Bu9peybOv9cST/state.json';
+// The data path is a secret kept OUT of this file (SPEC Step 3B/13):
+// it arrives once in the #d= fragment, is kept in localStorage, and the
+// fragment is stripped from the address bar immediately.
+(function () {
+  const m = location.hash.match(/#d=([A-Za-z0-9_-]+)/);
+  if (m) {
+    localStorage.setItem('desk_dp', m[1]);
+    history.replaceState(null, '', location.pathname);
+  }
+})();
+const DP = localStorage.getItem('desk_dp');
 async function tick() {
+  const upd = document.getElementById('updated');
+  if (!DP) {
+    upd.innerHTML = '<span class="err">No desk key in this browser yet — open the full link Castiel sent you (the one with #d= in it) once.</span>';
+    return;
+  }
   try {
-    const r = await fetch(DP, {cache:'no-store'});
+    const r = await fetch('d/' + DP + '/state.json', {cache:'no-store'});
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const s = await r.json();
     document.getElementById('mode').textContent = s.mode;
@@ -40,10 +55,10 @@ async function tick() {
     el.textContent = (s.today_pct >= 0 ? '+' : '') + s.today_pct.toFixed(2) + '%';
     el.style.color = s.today_pct >= 0 ? '#3fb950' : '#f85149';
     document.getElementById('agents').innerHTML = s.agents
-      .map(a => '<div class="row"><span><span class="dot' + (a.heartbeat_age_s < 45 ? '' : ' dead') + '"></span>' + a.name + '</span><span style="color:#8b949e;font-size:13px">' + a.status + '</span></div>').join('');
-    document.getElementById('updated').textContent = 'updated ' + new Date(s.ts * 1000).toLocaleTimeString();
+      .map(a => '<div class="row"><span><span class="dot' + (a.heartbeat_age_s !== null && a.heartbeat_age_s < 45 ? '' : ' dead') + '"></span>' + a.name + '</span><span style="color:#8b949e;font-size:13px">' + a.status + '</span></div>').join('');
+    upd.textContent = 'updated ' + new Date(s.ts * 1000).toLocaleTimeString();
   } catch (e) {
-    document.getElementById('updated').innerHTML = '<span class="err">cannot load desk data: ' + e.message + '</span>';
+    upd.innerHTML = '<span class="err">cannot load desk data: ' + e.message + '</span>';
   }
 }
 tick(); setInterval(tick, 15000);
