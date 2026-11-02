@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-02T09:54:17.828822+00:00",
+ "updated_at": "2026-11-02T09:55:53.398210+00:00",
  "target": {
   "strike": 78034.03,
   "ticker": "KXBTC15M-26NOV020445-45",
@@ -250,7 +250,8 @@
    "vwap": 0.88,
    "total_debit": 9.77,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.9217
+   "fair": 0.9217,
+   "kind": null
   },
   {
    "ticker": "KXBTCD-26NOV0205-T78299.99",
@@ -259,7 +260,8 @@
    "vwap": 0.77,
    "total_debit": 10.18,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.8017
+   "fair": 0.8017,
+   "kind": null
   },
   {
    "ticker": "KXBTCD-26NOV0205-T78199.99",
@@ -268,7 +270,8 @@
    "vwap": 0.55,
    "total_debit": 6.81,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.6094
+   "fair": 0.6094,
+   "kind": null
   },
   {
    "ticker": "KXBTCD-26NOV0205-T78099.99",
@@ -277,7 +280,8 @@
    "vwap": 0.35,
    "total_debit": 5.13,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.3847
+   "fair": 0.3847,
+   "kind": null
   },
   {
    "ticker": "KXBTCD-26NOV0205-T77999.99",
@@ -286,7 +290,8 @@
    "vwap": 0.16,
    "total_debit": 3.22,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.1678
+   "fair": 0.1678,
+   "kind": null
   },
   {
    "ticker": "KXBTCD-26NOV0205-T78099.99",
@@ -295,7 +300,8 @@
    "vwap": 0.76,
    "total_debit": 9.28,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.7887
+   "fair": 0.7887,
+   "kind": null
   },
   {
    "ticker": "KXBTCD-26NOV0205-T77999.99",
@@ -304,7 +310,8 @@
    "vwap": 0.9,
    "total_debit": 9.97,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.9386
+   "fair": 0.9386,
+   "kind": null
   },
   {
    "ticker": "KXBTC-26NOV0205-B78150",
@@ -313,7 +320,8 @@
    "vwap": 0.25,
    "total_debit": 3.43,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.2899
+   "fair": 0.2899,
+   "kind": null
   },
   {
    "ticker": "KXBTC-26NOV0205-B78050",
@@ -322,7 +330,8 @@
    "vwap": 0.19,
    "total_debit": 3.02,
    "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.2219
+   "fair": 0.2219,
+   "kind": null
   }
  ],
  "decisions": [
@@ -345,6 +354,8 @@
    "result": "no",
    "fair": 0.649,
    "won": true,
+   "close_time": "2026-11-02T09:30:00Z",
+   "side": "NO",
    "pnl": 4.32
   },
   {
@@ -352,6 +363,8 @@
    "result": "yes",
    "fair": 0.8512,
    "won": true,
+   "close_time": "2026-11-02T09:15:00Z",
+   "side": "YES",
    "pnl": 1.83
   },
   {
@@ -359,6 +372,8 @@
    "result": "yes",
    "fair": 0.4012,
    "won": false,
+   "close_time": "2026-11-02T09:15:00Z",
+   "side": "NO",
    "pnl": -9.88
   }
  ]
