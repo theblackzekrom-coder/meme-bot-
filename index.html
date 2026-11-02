@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>meme desk</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background:#0d1117; color:#e6edf3; font-family:-apple-system,system-ui,sans-serif; padding:20px 16px 40px; }
+  h1 { font-size:20px; font-weight:700; letter-spacing:.2px; }
+  .sub { color:#8b949e; font-size:13px; margin:4px 0 18px; }
+  .card { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:16px; margin-bottom:12px; }
+  .label { color:#8b949e; font-size:12px; text-transform:uppercase; letter-spacing:.6px; }
+  .big { font-size:34px; font-weight:700; margin-top:4px; }
+  .row { display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid #21262d; font-size:15px; }
+  .row:last-child { border-bottom:none; }
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#3fb950; margin-right:8px; }
+  .dot.dead { background:#f85149; }
+  .mode { display:inline-block; background:#9e6a03; color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; vertical-align:middle; margin-left:8px; }
+  .err { color:#f85149; font-size:14px; }
+</style>
+</head>
+<body>
+<h1>meme desk <span class="mode" id="mode">…</span></h1>
+<div class="sub" id="updated">loading…</div>
+<div class="card"><div class="label">Balance</div><div class="big" id="balance">—</div>
+<div class="label" style="margin-top:10px">Tonight</div><div style="font-size:20px;font-weight:600" id="pnl">—</div></div>
+<div class="card"><div class="label" style="margin-bottom:6px">Agents</div><div id="agents"></div></div>
+<script>
+const DP = location.pathname.replace(/\/?$/, '/') + 'd/_WqzOte27CigDJr55d49feRQyI7Bu9peybOv9cST/state.json';
+async function tick() {
+  try {
+    const r = await fetch(DP, {cache:'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const s = await r.json();
+    document.getElementById('mode').textContent = s.mode;
+    document.getElementById('balance').textContent = '$' + s.balance.toFixed(2);
+    const el = document.getElementById('pnl');
+    el.textContent = (s.today_pct >= 0 ? '+' : '') + s.today_pct.toFixed(2) + '%';
+    el.style.color = s.today_pct >= 0 ? '#3fb950' : '#f85149';
+    document.getElementById('agents').innerHTML = s.agents
+      .map(a => '<div class="row"><span><span class="dot' + (a.heartbeat_age_s < 45 ? '' : ' dead') + '"></span>' + a.name + '</span><span style="color:#8b949e;font-size:13px">' + a.status + '</span></div>').join('');
+    document.getElementById('updated').textContent = 'updated ' + new Date(s.ts * 1000).toLocaleTimeString();
+  } catch (e) {
+    document.getElementById('updated').innerHTML = '<span class="err">cannot load desk data: ' + e.message + '</span>';
+  }
+}
+tick(); setInterval(tick, 15000);
+</script>
+</body>
+</html>
