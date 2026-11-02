@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-02T12:16:14.332399+00:00",
+ "updated_at": "2026-11-02T12:18:13.965073+00:00",
  "target": {
   "strike": 77924.36,
   "ticker": "KXBTC15M-26NOV020730-30",
@@ -254,8 +254,8 @@
   "ticker": "KXBTC15M-26NOV020730-30",
   "close_time": "2026-11-02T12:30:00Z",
   "open_time": "2026-11-02T12:15:00Z",
-  "phase": "waiting",
-  "summary": "decision at open+75s"
+  "phase": "decided",
+  "summary": "PASS - no live spot anchor from the price venues"
  },
  "paper": {
   "cash": 204.46,
@@ -270,6 +270,12 @@
  },
  "positions": [],
  "decisions": [
+  {
+   "ts": "2026-11-02T12:16:37.771862+00:00",
+   "ticker": "KXBTC15M-26NOV020730-30",
+   "type": "pass",
+   "text": "no live spot anchor from the price venues"
+  },
   {
    "ts": "2026-11-02T12:01:17.343141+00:00",
    "ticker": "KXBTC15M-26NOV020715-15",
