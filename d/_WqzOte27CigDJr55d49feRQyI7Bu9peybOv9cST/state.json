@@ -1,13 +1,13 @@
 {
- "updated_at": "2026-11-02T10:46:17.616138+00:00",
+ "updated_at": "2026-11-02T10:48:16.152947+00:00",
  "target": {
-  "strike": 78034.03,
-  "ticker": "KXBTC15M-26NOV020445-45",
-  "distance": -42.39
+  "strike": 77882.76,
+  "ticker": "KXBTC15M-26NOV020600-00",
+  "distance": 25.12
  },
  "mode": "PAPER",
- "spot": 77991.63500000001,
- "vol_ticks": 1103,
+ "spot": 77907.875,
+ "vol_ticks": 38,
  "spot_series": [
   77871.65,
   77820.51,
@@ -222,18 +222,20 @@
   77956.75,
   77991.26,
   78003.85,
-  77985.35
+  77985.35,
+  77907.32,
+  77907.88
  ],
  "picker": {
-  "ticker": "KXBTC15M-26NOV020445-45",
-  "close_time": "2026-11-02T09:45:00Z",
-  "open_time": "2026-11-02T09:30:00Z",
+  "ticker": "KXBTC15M-26NOV020600-00",
+  "close_time": "2026-11-02T11:00:00Z",
+  "open_time": "2026-11-02T10:45:00Z",
   "phase": "decided",
-  "summary": "PASS - vol warm-up: 582 ticks < 1800 required"
+  "summary": "PASS - decision window missed (no decision by open+120s)"
  },
  "paper": {
-  "cash": 135.46,
-  "realized_pnl": -3.73,
+  "cash": 204.46,
+  "realized_pnl": 4.46,
   "start": 200.0
  },
  "learning": {
@@ -242,99 +244,14 @@
   "win_pct": null,
   "brier": null
  },
- "positions": [
-  {
-   "ticker": "KXBTCD-26NOV0205-T78399.99",
-   "side": "NO",
-   "contracts": 11,
-   "vwap": 0.88,
-   "total_debit": 9.77,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.9217,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTCD-26NOV0205-T78299.99",
-   "side": "NO",
-   "contracts": 13,
-   "vwap": 0.77,
-   "total_debit": 10.18,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.8017,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTCD-26NOV0205-T78199.99",
-   "side": "NO",
-   "contracts": 12,
-   "vwap": 0.55,
-   "total_debit": 6.81,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.6094,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTCD-26NOV0205-T78099.99",
-   "side": "NO",
-   "contracts": 14,
-   "vwap": 0.35,
-   "total_debit": 5.13,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.3847,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTCD-26NOV0205-T77999.99",
-   "side": "NO",
-   "contracts": 19,
-   "vwap": 0.16,
-   "total_debit": 3.22,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.1678,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTCD-26NOV0205-T78099.99",
-   "side": "YES",
-   "contracts": 12,
-   "vwap": 0.76,
-   "total_debit": 9.28,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.7887,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTCD-26NOV0205-T77999.99",
-   "side": "YES",
-   "contracts": 11,
-   "vwap": 0.9,
-   "total_debit": 9.97,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.9386,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTC-26NOV0205-B78150",
-   "side": "YES",
-   "contracts": 13,
-   "vwap": 0.25,
-   "total_debit": 3.43,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.2899,
-   "kind": null
-  },
-  {
-   "ticker": "KXBTC-26NOV0205-B78050",
-   "side": "YES",
-   "contracts": 15,
-   "vwap": 0.19,
-   "total_debit": 3.02,
-   "close_time": "2026-11-02T10:00:00Z",
-   "fair": 0.2219,
-   "kind": null
-  }
- ],
+ "positions": [],
  "decisions": [
+  {
+   "ts": "2026-11-02T10:47:32.605447+00:00",
+   "ticker": "KXBTC15M-26NOV020600-00",
+   "type": "pass",
+   "text": "decision window missed (no decision by open+120s)"
+  },
   {
    "ts": "2026-11-02T09:31:16.494256+00:00",
    "ticker": "KXBTC15M-26NOV020445-45",
@@ -350,6 +267,87 @@
  ],
  "settlements": [
   {
+   "ticker": "KXBTC-26NOV0205-B78050",
+   "result": "no",
+   "fair": 0.2219,
+   "won": false,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "YES",
+   "pnl": -3.02
+  },
+  {
+   "ticker": "KXBTC-26NOV0205-B78150",
+   "result": "no",
+   "fair": 0.2899,
+   "won": false,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "YES",
+   "pnl": -3.43
+  },
+  {
+   "ticker": "KXBTCD-26NOV0205-T77999.99",
+   "result": "no",
+   "fair": 0.9386,
+   "won": false,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "YES",
+   "pnl": -9.97
+  },
+  {
+   "ticker": "KXBTCD-26NOV0205-T78099.99",
+   "result": "no",
+   "fair": 0.7887,
+   "won": false,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "YES",
+   "pnl": -9.28
+  },
+  {
+   "ticker": "KXBTCD-26NOV0205-T77999.99",
+   "result": "no",
+   "fair": 0.1678,
+   "won": true,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "NO",
+   "pnl": 15.78
+  },
+  {
+   "ticker": "KXBTCD-26NOV0205-T78099.99",
+   "result": "no",
+   "fair": 0.3847,
+   "won": true,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "NO",
+   "pnl": 8.87
+  },
+  {
+   "ticker": "KXBTCD-26NOV0205-T78199.99",
+   "result": "no",
+   "fair": 0.6094,
+   "won": true,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "NO",
+   "pnl": 5.19
+  },
+  {
+   "ticker": "KXBTCD-26NOV0205-T78299.99",
+   "result": "no",
+   "fair": 0.8017,
+   "won": true,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "NO",
+   "pnl": 2.82
+  },
+  {
+   "ticker": "KXBTCD-26NOV0205-T78399.99",
+   "result": "no",
+   "fair": 0.9217,
+   "won": true,
+   "close_time": "2026-11-02T10:00:00Z",
+   "side": "NO",
+   "pnl": 1.23
+  },
+  {
    "ticker": "KXBTC15M-26NOV020430-30",
    "result": "no",
    "fair": 0.649,
@@ -357,24 +355,6 @@
    "close_time": "2026-11-02T09:30:00Z",
    "side": "NO",
    "pnl": 4.32
-  },
-  {
-   "ticker": "KXBTC15M-26NOV020415-15",
-   "result": "yes",
-   "fair": 0.8512,
-   "won": true,
-   "close_time": "2026-11-02T09:15:00Z",
-   "side": "YES",
-   "pnl": 1.83
-  },
-  {
-   "ticker": "KXBTC15M-26NOV020415-15",
-   "result": "yes",
-   "fair": 0.4012,
-   "won": false,
-   "close_time": "2026-11-02T09:15:00Z",
-   "side": "NO",
-   "pnl": -9.88
   }
  ]
 }
