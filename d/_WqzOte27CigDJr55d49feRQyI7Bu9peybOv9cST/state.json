@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-05T21:32:15.922464+00:00",
+ "updated_at": "2026-11-05T21:34:15.225119+00:00",
  "target": {
   "strike": 75842.44,
   "ticker": "KXBTC15M-26NOV051645-45",
@@ -254,8 +254,8 @@
   "ticker": "KXBTC15M-26NOV051645-45",
   "close_time": "2026-11-05T21:45:00Z",
   "open_time": "2026-11-05T21:30:00Z",
-  "phase": "waiting",
-  "summary": "decision at open+75s"
+  "phase": "decided",
+  "summary": "PASS - decision window missed (no decision by open+120s)"
  },
  "paper": {
   "cash": 204.46,
