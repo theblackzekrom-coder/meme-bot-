@@ -1,10 +1,6 @@
 {
- "updated_at": "2026-11-05T19:58:17.243871+00:00",
- "target": {
-  "strike": 76263.33,
-  "ticker": "KXBTC15M-26NOV051500-00",
-  "distance": null
- },
+ "updated_at": "2026-11-05T20:00:17.091875+00:00",
+ "target": null,
  "mode": "PAPER",
  "spot": null,
  "vol_ticks": 0,
@@ -251,11 +247,10 @@
   77006.27
  ],
  "picker": {
-  "ticker": "KXBTC15M-26NOV051500-00",
-  "close_time": "2026-11-05T20:00:00Z",
-  "open_time": "2026-11-05T19:45:00Z",
-  "phase": "decided",
-  "summary": "PASS - no live spot anchor from the price venues"
+  "phase": "no-market",
+  "ticker": null,
+  "close_time": null,
+  "summary": "no live 15-min interval right now"
  },
  "paper": {
   "cash": 204.46,
