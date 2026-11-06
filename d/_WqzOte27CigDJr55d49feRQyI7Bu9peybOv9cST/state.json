@@ -1,10 +1,6 @@
 {
- "updated_at": "2026-11-06T06:40:16.447216+00:00",
- "target": {
-  "strike": 75660.7,
-  "ticker": "KXBTC15M-26NOV052330-30",
-  "distance": null
- },
+ "updated_at": "2026-11-06T06:42:16.774310+00:00",
+ "target": null,
  "mode": "PAPER",
  "spot": null,
  "vol_ticks": 0,
