@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-06T12:44:15.921311+00:00",
+ "updated_at": "2026-11-06T12:46:16.921284+00:00",
  "target": {
-  "strike": 76214.65,
-  "ticker": "KXBTC15M-26NOV060745-45",
+  "strike": 76093.99,
+  "ticker": "KXBTC15M-26NOV060800-00",
   "distance": null
  },
  "mode": "PAPER",
@@ -251,11 +251,11 @@
   77006.27
  ],
  "picker": {
-  "ticker": "KXBTC15M-26NOV060745-45",
-  "close_time": "2026-11-06T12:45:00Z",
-  "open_time": "2026-11-06T12:30:00Z",
-  "phase": "decided",
-  "summary": "PASS - decision window missed (no decision by open+120s)"
+  "ticker": "KXBTC15M-26NOV060800-00",
+  "close_time": "2026-11-06T13:00:00Z",
+  "open_time": "2026-11-06T12:45:00Z",
+  "phase": "waiting",
+  "summary": "decision at open+75s"
  },
  "paper": {
   "cash": 204.46,
