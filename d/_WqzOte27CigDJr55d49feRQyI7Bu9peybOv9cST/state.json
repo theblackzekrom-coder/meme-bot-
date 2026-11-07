@@ -1,14 +1,14 @@
 {
- "updated_at": "2026-11-07T21:30:15.197283+00:00",
- "target": null,
+ "updated_at": "2026-11-07T21:32:16.169773+00:00",
+ "target": {
+  "strike": 75534.21,
+  "ticker": "KXBTC15M-26NOV071645-45",
+  "distance": -17.36
+ },
  "mode": "PAPER",
- "spot": 75522.05,
+ "spot": 75516.85,
  "vol_ticks": 1858,
  "spot_series": [
-  75687.65,
-  75684.74,
-  75685.98,
-  75684.74,
   75684.65,
   75684.71,
   75664.12,
@@ -244,16 +244,21 @@
   75534.02,
   75543.65,
   75532.12,
-  75532.12
+  75532.12,
+  75522.05,
+  75522.87,
+  75467.35,
+  75504.61
  ],
  "picker": {
-  "phase": "no-market",
-  "ticker": null,
-  "close_time": null,
-  "summary": "no live 15-min interval right now"
+  "ticker": "KXBTC15M-26NOV071645-45",
+  "close_time": "2026-11-07T21:45:00Z",
+  "open_time": "2026-11-07T21:30:00Z",
+  "phase": "decided",
+  "summary": "PICK DOWN @ 0.76 - locked"
  },
  "paper": {
-  "cash": 204.78,
+  "cash": 194.73,
   "realized_pnl": 4.78,
   "start": 200.0
  },
@@ -263,8 +268,25 @@
   "win_pct": 63.6,
   "brier": 0.1837
  },
- "positions": [],
+ "positions": [
+  {
+   "ticker": "KXBTC15M-26NOV071645-45",
+   "side": "NO",
+   "contracts": 13,
+   "vwap": 0.76,
+   "total_debit": 10.05,
+   "close_time": "2026-11-07T21:45:00Z",
+   "fair": 0.8679,
+   "kind": "pick"
+  }
+ ],
  "decisions": [
+  {
+   "ts": "2026-11-07T21:31:15.595605+00:00",
+   "ticker": "KXBTC15M-26NOV071645-45",
+   "type": "pick",
+   "text": "NO @ 76c - model 87%"
+  },
   {
    "ts": "2026-11-07T21:16:16.910910+00:00",
    "ticker": "KXBTC15M-26NOV071630-30",
@@ -318,12 +340,6 @@
    "ticker": "KXBTC15M-26NOV071430-30",
    "type": "pick",
    "text": "NO @ 43c - model 54%"
-  },
-  {
-   "ts": "2026-11-07T19:01:17.783178+00:00",
-   "ticker": "KXBTC15M-26NOV071415-15",
-   "type": "pick",
-   "text": "NO @ 68c - model 80%"
   }
  ],
  "settlements": [
