@@ -1,18 +1,14 @@
 {
- "updated_at": "2026-11-07T22:14:16.910040+00:00",
+ "updated_at": "2026-11-07T22:16:16.670005+00:00",
  "target": {
-  "strike": 75639.57,
-  "ticker": "KXBTC15M-26NOV071715-15",
-  "distance": -11.7
+  "strike": 75631.97,
+  "ticker": "KXBTC15M-26NOV071730-30",
+  "distance": 24.18
  },
  "mode": "PAPER",
- "spot": 75627.875,
+ "spot": 75656.155,
  "vol_ticks": 1858,
  "spot_series": [
-  75688.82,
-  75689.89,
-  75686.68,
-  75687.26,
   75686.98,
   75687.24,
   75686.68,
@@ -248,17 +244,21 @@
   75634.15,
   75634.15,
   75629.1,
-  75630.45
+  75630.45,
+  75627.88,
+  75627.89,
+  75629.58,
+  75650.65
  ],
  "picker": {
-  "ticker": "KXBTC15M-26NOV071715-15",
-  "close_time": "2026-11-07T22:15:00Z",
-  "open_time": "2026-11-07T22:00:00Z",
-  "phase": "decided",
-  "summary": "PASS - best edge -0.39c (YES) below the 4c minimum"
+  "ticker": "KXBTC15M-26NOV071730-30",
+  "close_time": "2026-11-07T22:30:00Z",
+  "open_time": "2026-11-07T22:15:00Z",
+  "phase": "waiting",
+  "summary": "decision at open+75s"
  },
  "paper": {
-  "cash": 194.73,
+  "cash": 185.18,
   "realized_pnl": -5.27,
   "start": 200.0
  },
@@ -268,8 +268,25 @@
   "win_pct": 58.3,
   "brier": 0.2312
  },
- "positions": [],
+ "positions": [
+  {
+   "ticker": "KXBTC15M-26NOV071730-30",
+   "side": "YES",
+   "contracts": 13,
+   "vwap": 0.72,
+   "total_debit": 9.55,
+   "close_time": "2026-11-07T22:30:00Z",
+   "fair": 0.7917,
+   "kind": "pick"
+  }
+ ],
  "decisions": [
+  {
+   "ts": "2026-11-07T22:16:15.686225+00:00",
+   "ticker": "KXBTC15M-26NOV071730-30",
+   "type": "pick",
+   "text": "YES @ 72c - model 79%"
+  },
   {
    "ts": "2026-11-07T22:01:16.119308+00:00",
    "ticker": "KXBTC15M-26NOV071715-15",
@@ -323,12 +340,6 @@
    "ticker": "KXBTC15M-26NOV071515-15",
    "type": "pass",
    "text": "best edge -2.92c (NO) below the 4c minimum"
-  },
-  {
-   "ts": "2026-11-07T19:46:16.751456+00:00",
-   "ticker": "KXBTC15M-26NOV071500-00",
-   "type": "pass",
-   "text": "best edge 3.13c (NO) below the 4c minimum"
   }
  ],
  "settlements": [
