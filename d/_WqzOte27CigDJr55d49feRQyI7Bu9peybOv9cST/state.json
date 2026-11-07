@@ -1,18 +1,14 @@
 {
- "updated_at": "2026-11-07T18:46:16.176132+00:00",
+ "updated_at": "2026-11-07T18:48:16.259652+00:00",
  "target": {
   "strike": 75722.12,
   "ticker": "KXBTC15M-26NOV071400-00",
-  "distance": -6.13
+  "distance": -8.85
  },
  "mode": "PAPER",
- "spot": 75715.985,
+ "spot": 75713.265,
  "vol_ticks": 1858,
  "spot_series": [
-  75655.65,
-  75637.58,
-  75631.61,
-  75618.17,
   75616.65,
   75616.65,
   75621.75,
@@ -248,14 +244,18 @@
   75716.45,
   75716.45,
   75717.35,
-  75715.99
+  75715.99,
+  75717.35,
+  75715.99,
+  75713.29,
+  75714.77
  ],
  "picker": {
   "ticker": "KXBTC15M-26NOV071400-00",
   "close_time": "2026-11-07T19:00:00Z",
   "open_time": "2026-11-07T18:45:00Z",
-  "phase": "waiting",
-  "summary": "decision at open+75s"
+  "phase": "decided",
+  "summary": "PASS - best edge 0.14c (NO) below the 4c minimum"
  },
  "paper": {
   "cash": 204.16,
@@ -270,6 +270,12 @@
  },
  "positions": [],
  "decisions": [
+  {
+   "ts": "2026-11-07T18:46:16.586166+00:00",
+   "ticker": "KXBTC15M-26NOV071400-00",
+   "type": "pass",
+   "text": "best edge 0.14c (NO) below the 4c minimum"
+  },
   {
    "ts": "2026-11-07T18:31:16.682770+00:00",
    "ticker": "KXBTC15M-26NOV071345-45",
@@ -323,12 +329,6 @@
    "ticker": "KXBTC15M-26NOV071145-45",
    "type": "pass",
    "text": "best edge 0.68c (NO) below the 4c minimum"
-  },
-  {
-   "ts": "2026-11-07T16:16:17.409777+00:00",
-   "ticker": "KXBTC15M-26NOV071130-30",
-   "type": "pass",
-   "text": "best edge 1.73c (NO) below the 4c minimum"
   }
  ],
  "settlements": [
