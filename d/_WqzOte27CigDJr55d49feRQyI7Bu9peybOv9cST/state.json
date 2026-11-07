@@ -1,18 +1,10 @@
 {
- "updated_at": "2026-11-07T14:58:18.110062+00:00",
- "target": {
-  "strike": 75858.51,
-  "ticker": "KXBTC15M-26NOV071000-00",
-  "distance": -6.76
- },
+ "updated_at": "2026-11-07T15:00:17.877074+00:00",
+ "target": null,
  "mode": "PAPER",
- "spot": 75851.75,
+ "spot": 75852.75,
  "vol_ticks": 1858,
  "spot_series": [
-  79373.33,
-  79393.85,
-  79420.58,
-  79415.29,
   79383.55,
   79491.24,
   79424.4,
@@ -248,14 +240,17 @@
   75859.25,
   75859.25,
   75850.05,
-  75851.27
+  75851.27,
+  75851.75,
+  75852.75,
+  75852.75,
+  75852.75
  ],
  "picker": {
-  "ticker": "KXBTC15M-26NOV071000-00",
-  "close_time": "2026-11-07T15:00:00Z",
-  "open_time": "2026-11-07T14:45:00Z",
-  "phase": "decided",
-  "summary": "PASS - best edge -1.77c (NO) below the 4c minimum"
+  "phase": "no-market",
+  "ticker": null,
+  "close_time": null,
+  "summary": "no live 15-min interval right now"
  },
  "paper": {
   "cash": 208.08,
