@@ -1,18 +1,14 @@
 {
- "updated_at": "2026-11-08T14:46:16.571147+00:00",
+ "updated_at": "2026-11-08T14:48:16.750487+00:00",
  "target": {
   "strike": 75905.02,
   "ticker": "KXBTC15M-26NOV081000-00",
-  "distance": 26.03
+  "distance": 29.57
  },
  "mode": "PAPER",
- "spot": 75931.05,
+ "spot": 75934.595,
  "vol_ticks": 1858,
  "spot_series": [
-  75638.35,
-  75638.35,
-  75638.35,
-  75638.35,
   75638.35,
   75642.15,
   75650.85,
@@ -248,39 +244,38 @@
   75905.49,
   75906.15,
   75909.89,
-  75931.05
+  75931.05,
+  75932.64,
+  75936.98,
+  75921.7,
+  75919.73
  ],
  "picker": {
   "ticker": "KXBTC15M-26NOV081000-00",
   "close_time": "2026-11-08T15:00:00Z",
   "open_time": "2026-11-08T14:45:00Z",
-  "phase": "waiting",
-  "summary": "decision at open+75s"
+  "phase": "decided",
+  "summary": "PASS - best edge -4.64c (YES) below the 4c minimum"
  },
  "paper": {
-  "cash": 175.73,
-  "realized_pnl": -14.82,
+  "cash": 186.73,
+  "realized_pnl": -13.27,
   "start": 200.0
  },
  "learning": {
-  "record": "7-6",
-  "settled": 13,
-  "win_pct": 53.8,
-  "brier": 0.2616
+  "record": "8-6",
+  "settled": 14,
+  "win_pct": 57.1,
+  "brier": 0.2433
  },
- "positions": [
-  {
-   "ticker": "KXBTC15M-26NOV080945-45",
-   "side": "YES",
-   "contracts": 11,
-   "vwap": 0.85,
-   "total_debit": 9.45,
-   "close_time": "2026-11-08T14:45:00Z",
-   "fair": 0.9251,
-   "kind": "pick"
-  }
- ],
+ "positions": [],
  "decisions": [
+  {
+   "ts": "2026-11-08T14:46:16.736745+00:00",
+   "ticker": "KXBTC15M-26NOV081000-00",
+   "type": "pass",
+   "text": "best edge -4.64c (YES) below the 4c minimum"
+  },
   {
    "ts": "2026-11-08T14:31:16.887175+00:00",
    "ticker": "KXBTC15M-26NOV080945-45",
@@ -334,12 +329,6 @@
    "ticker": "KXBTC15M-26NOV071715-15",
    "type": "pass",
    "text": "best edge -0.39c (YES) below the 4c minimum"
-  },
-  {
-   "ts": "2026-11-07T21:46:16.148396+00:00",
-   "ticker": "KXBTC15M-26NOV071700-00",
-   "type": "pass",
-   "text": "best edge -0.35c (NO) below the 4c minimum"
   }
  ],
  "settlements": [
